@@ -8,8 +8,8 @@ export const getUserId = () => {
         return null;
     }
 
-    const decoded_token = jwtDecode(token);
-    return decoded_token.user_id;
+    const decoded_token = token;
+    return decoded_token;
 };
 
 export const register = async (email, password, name) => {
