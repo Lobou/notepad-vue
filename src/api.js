@@ -1,6 +1,6 @@
 import { jwtDecode } from 'jwt-decode';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://notepad-x64m.onrender.com';
 
 export const getUserId = () => {
     const token = localStorage.getItem('token');
