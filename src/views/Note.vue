@@ -90,12 +90,7 @@ export default defineComponent({
         },
 
         async getOwners() {
-            try {
                 this.owners = await getNoteOwners(this.id, this.userId);
-
-            } catch (error) {
-
-            }
             return this.owners;
         },
 
@@ -168,7 +163,6 @@ export default defineComponent({
             }
         },
         async getNoteVersions() {
-            try {
                 let version = await getNoteVersions(this.id);
                 version.sort((a, b) => new Date(a.creation) - new Date(b.creation));
                 this.versions = version.map((version, index) => ({
@@ -176,9 +170,6 @@ export default defineComponent({
                     value: version.content, 
                     creation: version.creation
                 }));
-            } catch (error) {
-
-            }
         }
     },
     mounted() {

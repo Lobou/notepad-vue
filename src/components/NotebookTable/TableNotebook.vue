@@ -67,11 +67,7 @@ export default {
       this.tableData = await getNotesFromNotebook(this.notebookId);
     },
     async getNotebookInfo() {
-      try {
         this.notebook = await getNotebook(this.notebookId);
-      } catch (error) {
-
-      }
     },
     async deleteRow(objectToDelete) {
         let loadingInstance = null;

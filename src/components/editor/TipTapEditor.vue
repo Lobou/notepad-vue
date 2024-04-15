@@ -91,12 +91,9 @@ export default {
             });
 
             this.userId = getUserId();
-            try {
                 const data = await getNote(this.noteId);
                 this.note = data;
                 this.$refs?.editor?.setContent(this.note.content); 
-            } catch (error) {
-            }
 
         } catch (error) {
             ElMessage({
