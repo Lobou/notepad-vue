@@ -70,7 +70,7 @@ export default {
       try {
         this.notebook = await getNotebook(this.notebookId);
       } catch (error) {
-        console.error('Failed to fetch notebook:', error);
+
       }
     },
     async deleteRow(objectToDelete) {
@@ -90,7 +90,7 @@ export default {
                 message: 'Failed to delete or fetch note',
                 type: 'error'
             });
-            console.error('Failed to delete or fetch note:', error);
+
         } finally {
             if (loadingInstance) {
                 loadingInstance.close();
@@ -119,7 +119,7 @@ export default {
                 message: 'Failed to fetch notes',
                 type: 'error'
             });
-            console.error('Failed to fetch notes:', error);
+
         } finally {
             if (loadingInstance) {
                 loadingInstance.close();
@@ -147,7 +147,7 @@ export default {
                 message: 'Failed to add or fetch notebooks',
                 type: 'error'
             });
-            console.error('Failed to add or fetch notebooks:', error);
+
         } finally {
             if (loadingInstance) {
                 loadingInstance.close();

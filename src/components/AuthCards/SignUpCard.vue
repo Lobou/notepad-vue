@@ -90,7 +90,7 @@
 
       const attemptSignUp = async () => {
         const response = await register(signupForm.email, signupForm.password, signupForm.name);
-        console.log(response)
+
         if (response?.success === true) {
           successMessage();
         } else {

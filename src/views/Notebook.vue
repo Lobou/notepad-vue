@@ -47,7 +47,7 @@ export default {
                 message: 'Failed to add or fetch notebooks',
                 type: 'error'
             });
-            console.error('Failed to add or fetch notebooks:', error);
+
         } finally {
             if (loadingInstance) {
                 loadingInstance.close();

@@ -78,7 +78,6 @@ export default {
             saveNoteContent(this.noteId, this.note?.content, this.userId);
         },
         setContent(content) {
-            console.log(content);
             this.$refs?.editor?.setContent(content); 
         },
     },
@@ -97,7 +96,6 @@ export default {
                 this.note = data;
                 this.$refs?.editor?.setContent(this.note.content); 
             } catch (error) {
-                console.error('Error fetching note:', error);
             }
 
         } catch (error) {
@@ -105,7 +103,6 @@ export default {
                 message: 'Failed to load notes data',
                 type: 'error'
             });
-            console.error('Failed to load notes data:', error);
         } finally {
             if (loadingInstance) {
                 loadingInstance.close();

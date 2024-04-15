@@ -72,7 +72,7 @@ export default {
 
     this.myLists = await getNotebooks(userId)
     this.recentNotes = await getRecentNotes(userId)
-    console.log(this.recentNotes)
+
   },
   methods: {
     goToNote(id) {

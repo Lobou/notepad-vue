@@ -70,7 +70,7 @@ export default defineComponent({
     }
 
     const setContent = (content) => {
-        console.log(content)
+
         tipTapEditor.value.setContent(content)
     }
 
@@ -92,9 +92,9 @@ export default defineComponent({
         async getOwners() {
             try {
                 this.owners = await getNoteOwners(this.id, this.userId);
-                console.log(this.owners);
+
             } catch (error) {
-                console.error('Failed to fetch note owners:', error);
+
             }
             return this.owners;
         },
@@ -114,7 +114,7 @@ export default defineComponent({
                     message: 'Failed to add or fetch notebooks',
                     type: 'error'
                 });
-                console.error('Failed to add or fetch notebooks:', error);
+
             } finally {
                 if (loadingInstance) {
                     loadingInstance.close();
@@ -177,7 +177,7 @@ export default defineComponent({
                     creation: version.creation
                 }));
             } catch (error) {
-                console.error('Failed to fetch note versions:', error);
+
             }
         }
     },
